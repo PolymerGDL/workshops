@@ -6,6 +6,14 @@ class PokedexCard extends PolymerElement {
     return 'pokedex-card'
   }
 
+  static get properties () {
+    return {
+      pokemon: {
+        type: Object
+      }
+    }
+  }
+
   static get template () {
     return html`
       <style>
@@ -15,7 +23,7 @@ class PokedexCard extends PolymerElement {
         .container {
           background-color: bisque;
           min-width: 160px;
-          min-height: 160px;
+          height: 200px;
           position: relative;
         }
         .label {
@@ -35,23 +43,16 @@ class PokedexCard extends PolymerElement {
         .poke-avatar {
           height: auto;
           max-width: 90%;
+          max-height: 100%;
         }
       </style>
-      <div class="container">
+      <article class="container">
         <button class="poke-container">
           <img class="poke-avatar" src="[[pokemon.icon]]" alt="[[pokemon.name]]">
         </button>
         <span class="label">[[pokemon.name]]</span>
-      </div>
+      </article>
     `
-  }
-
-  static get properties () {
-    return {
-      pokemon: {
-        type: Object
-      }
-    }
   }
 }
 
