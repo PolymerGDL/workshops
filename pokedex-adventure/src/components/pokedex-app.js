@@ -32,7 +32,6 @@ class PokedexApp extends PolymerElement {
         <pokedex-landing name=""></pokedex-landing>
         <pokedex-page name="pokemons" route={{subroute}}></pokedex-page>
       </iron-pages>
-      
     `
   }
 }
