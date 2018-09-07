@@ -10,13 +10,13 @@ class PokedexPokemon extends PolymerElement {
   static get properties () {
     return {
       pokemon: {
-        type: Array,
+        type: Object,
         value: function () {
           return {}
         },
         readOnly: true
       },
-      route: Object
+      x: String
     }
   }
 
@@ -27,8 +27,24 @@ class PokedexPokemon extends PolymerElement {
           display: block;
         }
       </style>
-      <span>Pokemon {{data.id}}</span>
+      <iron-ajax
+        auto
+        url="http://localhost:3000/pokemons/[[data.id]]"
+        handle-as="json"
+        on-response="_loadPokemon"
+      >
+      </iron-ajax>
+      <button on-click="_goBack">Go back</button>
+      <pokedex-card pokemon="[[pokemon]]"></pokedex-card>
     `
+  }
+
+  _loadPokemon (event) {
+    this._setPokemon(event.detail.response)
+  }
+
+  _goBack (event) {
+    this.set('route.path', '/')
   }
 }
 
