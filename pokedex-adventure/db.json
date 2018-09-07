@@ -1,0 +1,28 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "plant",
+      "icon": "https://i.pinimg.com/originals/fb/87/da/fb87da1a56f6a17e4c6062acc8c7c546.png",
+      "battles": [],
+      "captured": false
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "icon": "https://vignette.wikia.nocookie.net/es.pokemon/images/8/86/Ivysaur.png",
+      "type": "poison",
+      "battles": [],
+      "captured": false
+    },
+    {
+      "id": "4",
+      "name": "Charmander",
+      "icon": "https://vignette.wikia.nocookie.net/es.pokemon/images/5/56/Charmander.png",
+      "type": "poison",
+      "battles": [],
+      "captured": false
+    }
+  ]
+}
