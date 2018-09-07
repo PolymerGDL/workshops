@@ -1,2 +1,8 @@
 import '@webcomponents/webcomponentsjs/webcomponents-loader'
 import './components/pokedex-app'
+import './components/pokedex-page'
+import './components/pokedex-list'
+import './components/pokedex-card'
+import './components/pokedex-landing'
+import './components/pokedex-pokemon'
+import './components/pokedex-pokemons'
