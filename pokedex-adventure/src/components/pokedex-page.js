@@ -9,18 +9,6 @@ class PokedexPage extends PolymerElement {
     return 'pokedex-page'
   }
 
-  static get properties () {
-    return {
-      pokemons: {
-        type: Array,
-        value: function () {
-          return []
-        },
-        readOnly: true
-      }
-    }
-  }
-
   static get template () {
     return html`
       <style>
