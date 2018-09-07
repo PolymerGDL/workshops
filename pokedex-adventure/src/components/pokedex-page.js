@@ -22,15 +22,15 @@ class PokedexPage extends PolymerElement {
         data="{{pokeData}}"
       >
       </app-route>
-      <iron-pages selected="[[_getNameRoute(pokeData.id)]]" attr-for-selected="name">
+      <iron-pages selected="[[_getNameRoute(route.path)]]" attr-for-selected="name">
         <pokedex-pokemons name="root" route="{{route}}"></pokedex-pokemons>
         <pokedex-pokemon name="detail" route="{{route}}" data={{pokeData}} ></pokedex-pokemon>
       </iron-pages>
     `
   }
 
-  _getNameRoute (id) {
-    if (!id) {
+  _getNameRoute (path) {
+    if (!path || path === '/') {
       return 'root'
     }
     return 'detail'
